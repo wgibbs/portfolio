@@ -1,9 +1,9 @@
-# portfolio
-My web development portfolio site, which can be viewed [here](https://www.wgibbs.com/)
+# Portfolio
+My web development portfolio site, which can be viewed [here>>](https://www.wgibbs.com/)
 
 ## Technologies
-Nuxt.js => [Docs](https://nuxtjs.org)
-Tailwind CSS => [Docs](https://tailwindcss.com/)
+Nuxt.js => [Docs>>](https://nuxtjs.org)<br />
+Tailwind CSS => [Docs>>](https://tailwindcss.com/)
 
 ## Build Setup
 
