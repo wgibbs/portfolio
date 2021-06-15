@@ -86,6 +86,9 @@ sw.*
 # macOS
 .DS_Store
 
+# .htaccess
+.htaccess
+
 # Vim swap files
 *.swp
 

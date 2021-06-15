@@ -54,11 +54,11 @@
             link_2_url: 'https://github.com/wgibbs/job-posts-app',
           },
           {
-            title: 'Vue Photo Gallery',
-            description: 'A single page application photo gallery created to learn Vue.js and to showcase some of my nature/outdoor photography. I contributed UI/UX Design and front-end development.',
-            img_url: './img/travel-gallery-img.jpg',
-            link_1_url: 'https://www.wgibbs.com/vue-photo-gallery/',
-            link_2_url: 'https://github.com/wgibbs/vue-photo-gallery',
+            title: 'Photo Gallery App',
+            description: 'A single page application photo gallery created with Nuxt.js + Tailwind CSS and built to showcase some of my nature/outdoor photography. I contributed UI/UX Design and front-end development.',
+            img_url: './img/photo-gallery-app.jpg',
+            link_1_url: 'https://wgibbs.com/photo-gallery-app/',
+            link_2_url: 'https://github.com/wgibbs/photo-gallery-app',
           },
           {
             title: 'MJML Email Builder',
