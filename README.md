@@ -1,5 +1,5 @@
 # Portfolio
-My web development portfolio site, which can be viewed [here =>](https://www.wgibbs.com/)
+My web development portfolio site, which can be viewed [here =>](https://wgibbs.github.io/portfolio/)
 
 ## Technologies
 Nuxt.js: [Docs =>](https://nuxtjs.org)<br />
