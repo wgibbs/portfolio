@@ -14,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Hello, my name is Wes. I am a front-end web developer.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' },
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Open+Sans:wght@400;600&display=swap'}
     ]
   },
