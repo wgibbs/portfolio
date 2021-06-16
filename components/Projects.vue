@@ -50,21 +50,21 @@
             title: 'Job Posts App',
             description: 'A single page application prototype for Job Posts built with Create React App, Material-UI and Fuse.js. I contributed UI/UX Design and front-end development.',
             img_url: './img/job-posts-app.jpg',
-            link_1_url: 'https://www.wgibbs.com/job-posts-app/',
+            link_1_url: 'https://wgibbs.github.io/job-posts-app/',
             link_2_url: 'https://github.com/wgibbs/job-posts-app',
           },
           {
             title: 'Photo Gallery App',
             description: 'A single page application photo gallery created with Nuxt.js + Tailwind CSS and built to showcase some of my nature/outdoor photography. I contributed UI/UX Design and front-end development.',
             img_url: './img/photo-gallery-app.jpg',
-            link_1_url: 'https://wgibbs.com/photo-gallery-app/',
+            link_1_url: 'https://wgibbs.github.io/photo-gallery-app/',
             link_2_url: 'https://github.com/wgibbs/photo-gallery-app',
           },
           {
             title: 'MJML Email Builder',
             description: 'A system incorporating MJML + Gulp to create fully responsive emails. The project example is a prototype email newsletter template I designed and developed to go along with my Photo Gallery.',
             img_url: './img/mjml-email-builder.jpg',
-            link_1_url: 'https://www.wgibbs.com/mjml-email-builder-template-1/',
+            link_1_url: 'https://wgibbs.github.io/mjml-email-builder/',
             link_2_url: 'https://github.com/wgibbs/mjml-email-builder'
           }
         ]
