@@ -32,7 +32,7 @@
         </li>
         <li class="w-full md:w-auto mx-2 mt-2 md:mt-0">
           <a 
-            href="/pdf/resume.pdf" 
+            href="/portfolio/pdf/resume.pdf" 
             class="p-2 flex items-center justify-center border-2 border-solid w-full md:w-auto rounded hover:border-black focus:outline-none focus:border-black transition-all duration-300"
             target="_blank"
           >
