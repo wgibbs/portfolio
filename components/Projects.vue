@@ -1,7 +1,7 @@
 <template>
   <section class="project-items">
     <div class="container mx-auto p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-      <div class="border rounded p-5 flex flex-col" v-for="(project, index) in projects">
+      <div class="border rounded p-5 flex flex-col" v-for="(project, index) in projects" :key="index">
         <div class="border rounded bg-gray-200 flex-grow-0 p-3">
           <img :src="project.img_url" :alt="project.title" />
         </div>
@@ -47,15 +47,15 @@
       return {
         projects: [
           {
-            title: 'Job Posts App',
-            description: 'A single page application prototype for Job Posts built with Create React App, Material-UI and Fuse.js. I contributed UI/UX Design and front-end development.',
+            title: 'Job Posts Web App',
+            description: 'A single-page application prototype for Job Posts built with Create React App, Material-UI and Fuse.js. I contributed UI/UX Design and front-end development.',
             img_url: './img/job-posts-app.jpg',
             link_1_url: 'https://wgibbs.github.io/job-posts-app/',
             link_2_url: 'https://github.com/wgibbs/job-posts-app',
           },
           {
-            title: 'Photo Gallery App',
-            description: 'A single page application photo gallery created with Nuxt.js + Tailwind CSS and built to showcase some of my nature/outdoor photography. I contributed UI/UX Design and front-end development.',
+            title: 'Photo Gallery Web App',
+            description: 'A single-page application photo gallery created with Vue/Nuxt.js + Tailwind CSS and built to showcase some of my nature/outdoor photography. I contributed UI/UX Design and front-end development.',
             img_url: './img/photo-gallery-app.jpg',
             link_1_url: 'https://wgibbs.github.io/photo-gallery-app/',
             link_2_url: 'https://github.com/wgibbs/photo-gallery-app',
