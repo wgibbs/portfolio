@@ -19,7 +19,7 @@
     data() {
       return {
         introTitle: 'Hello, and thanks for stopping by.',
-        introTextP1: 'I\'m a front-end web developer who gravitates towards the visual side of the technology world. I specialize in building responsive microsites, landing pages and emails - primarily working with HTML, CSS\/SCSS\/Tailwind CSS, MJML and JavaScript\/React\/Vue\/jQuery.',
+        introTextP1: 'I am a front-end and email developer who gravitates towards the visual side of the technology world. I specialize in building responsive microsites, landing pages and emails - primarily working with HTML, CSS(SCSS\/SASS\/Tailwind CSS), MJML and JavaScript(jQuery\/React\/Vue).',
         introTextP2: 'Please see below for some of my recent projects.',
       }
     }

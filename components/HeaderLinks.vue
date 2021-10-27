@@ -3,11 +3,11 @@
     <li
       v-for="(link, index) in links" 
       :key="index"
-      v-bind:class="['w-full md:w-auto mx-2', (index != 0 ? 'mt-2 md:mt-0' : '')]"
+      v-bind:class="['w-full md:w-1/2 mx-2', (index != 0 ? 'mt-2 md:mt-0' : '')]"
     >
       <a 
         :href="link.url" 
-        class="p-2 flex items-center justify-center border-2 border-solid rounded hover:border-black focus:outline-none focus:border-black transition-all duration-300"
+        class="p-2 flex items-center justify-center bg-white border-2 border-gray-300 hover:border-black focus:outline-none focus:border-black transition-all duration-300"
         target="_blank"
       >
         {{ link.text }}
@@ -31,10 +31,6 @@
           {
             text: 'LinkedIn',
             url: 'https://www.linkedin.com/in/wes-gibbs-a311198/',
-          },
-          {
-            text: 'Resume',
-            url: '/pdf/resume.pdf'
           },
         ]
       }

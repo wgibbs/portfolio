@@ -8,6 +8,9 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
+    boxShadow: {
+      DEFAULT: '0 0 10px 0 rgb(0 0 0 / 10%)',
+    },
     screens: {
       'sm': '480px',
       'md': '768px',

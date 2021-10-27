@@ -3,7 +3,10 @@ export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - front-end developer',
+    bodyAttrs: {
+      class: 'bg-gray-50',
+    },
+    titleTemplate: '%s - front-end + email developer',
     title: 'wes gibbs',
     htmlAttrs: {
       lang: 'en'
