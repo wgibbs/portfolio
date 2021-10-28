@@ -58,6 +58,12 @@
             link_2_url: 'https://github.com/wgibbs/photo-gallery-app',
           },
           {
+            title: 'Charityvest Email',
+            description: 'An email developed for the company Charityvest. I contributed responsive email development and QA testing with Litmus.',
+            img_url: './img/charityvest.jpg',
+            link_1_url: 'https://wgibbs.github.io/charityvest-email-1/',
+          },
+          {
             title: 'Crossover2x Website',
             description: 'A business education start up platform created with a few friends/colleagues and built with the MDB React Framework. I contributed UI/UX Design and front-end development.',
             img_url: './img/crossover2x.jpg',
@@ -65,19 +71,19 @@
             link_2_url: 'https://github.com/ericYagerPractice/crossover_2x',
           },
           {
+            title: 'MJML Email Builder',
+            description: 'A system incorporating MJML + Gulp to create responsive emails. The project example is a prototype email newsletter template I designed and developed to go along with my Photo Gallery.',
+            img_url: './img/mjml-email-builder.jpg',
+            link_1_url: 'https://wgibbs.github.io/mjml-email-builder/',
+            link_2_url: 'https://github.com/wgibbs/mjml-email-builder'
+          },
+           {
             title: 'Job Posts Web App',
             description: 'A single-page application prototype for Job Posts built with Create React App, Material-UI and Fuse.js. I contributed UI/UX Design and front-end development.',
             img_url: './img/job-posts-app.jpg',
             link_1_url: 'https://wgibbs.github.io/job-posts-app/',
             link_2_url: 'https://github.com/wgibbs/job-posts-app',
           },
-          {
-            title: 'MJML Email Builder',
-            description: 'A system incorporating MJML + Gulp to create responsive emails. The project example is a prototype email newsletter template I designed and developed to go along with my Photo Gallery.',
-            img_url: './img/mjml-email-builder.jpg',
-            link_1_url: 'https://wgibbs.github.io/mjml-email-builder/',
-            link_2_url: 'https://github.com/wgibbs/mjml-email-builder'
-          }
         ]
       }
     }
