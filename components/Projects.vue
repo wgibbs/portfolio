@@ -64,13 +64,6 @@
             link_1_url: 'https://wgibbs.github.io/charityvest-email-1/',
           },
           {
-            title: 'Crossover2x Website',
-            description: 'A business education start up platform created with a few friends/colleagues and built with the MDB React Framework. I contributed UI/UX Design and front-end development.',
-            img_url: './img/crossover2x.jpg',
-            link_1_url: 'https://www.crossover2x.net/',
-            link_2_url: 'https://github.com/ericYagerPractice/crossover_2x',
-          },
-          {
             title: 'MJML Email Builder',
             description: 'A system incorporating MJML + Gulp to create responsive emails. The project example is a prototype email newsletter template I designed and developed to go along with my Photo Gallery.',
             img_url: './img/mjml-email-builder.jpg',
