@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wes gibbs - web developer</title>
+  <meta name="description" content="I am a web developer who gravitates towards the visual side of the technology world.">
+  <meta property="og:title" content="wes gibbs - web developer">
+  <meta property="og:url" content="https://wgibbs.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="./css/style.min.css?v=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__titles">
+        <h1 class="font-medium">wes gibbs</h1>
+        <h2 class="font-light">web developer</h2>
+      </div>
+      <div class="header__links">
+        <a class="btn" href="https://github.com/wgibbs" target="_blank">
+          <span>GitHub</span>
+          <span class="btn__svg"></span>
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/wes-gibbs-a311198/" target="_blank">
+          <span>LinkedIn</span>
+          <span class="btn__svg"></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="container">
+      <h3 class="font-medium">Hello, and thanks for stopping by.</h3>
+      <p>I am a web developer who gravitates towards the visual side of the technology world. I specialize in building responsive microsites, landing pages and emails with a keen eye for detail and attention to design. Please see below for some of my recent projects.</p>
+    </div>
+  </section>
+
+  <script id="work-card-template" type="text/x-handlebars-template">
+    {{#each cards}}
+      <div class="work__card">
+        <figure>
+          <img src="{{ img_url }}" alt="{{ title }}: Image" />
+        </figure>
+        <h4 class="font-medium">{{ title }}</h4>
+        <p>{{ description }}</p>
+        <a class="btn" href="{{ link_url }}" target="_blank">
+          <span>View Project</span>
+          {{> svg-arrow }}
+        </a>
+      </div>
+    {{/each}}
+  </script>
+
+  <section class="work">
+    <div class="container">
+      <div class="work__card-container"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <hr />
+  </footer>
+
+</body>
+</html>
