@@ -1,8 +1,11 @@
+// A variable to keep track of the slideshow state.
+let slideshowActive = false;
+let slideshowListeners = {};
+
 function initWorkCards() {
   const templateSource = document.getElementById('work-card-template').innerHTML;
   const template = Handlebars.compile(templateSource);
   const container = document.querySelector('.work__card-container');
-
   const workCardData = {
     cards: [{
         img_url: './img/photo-gallery-app.jpg',
@@ -34,36 +37,106 @@ function initWorkCards() {
   const renderedHTML = template(workCardData);
   container.innerHTML = renderedHTML;
 
-  // Select all the newly rendered cards
   const workCards = document.querySelectorAll('.work__card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('fade-in');
+        }, index * 250);
 
-  // Loop through each card and add the 'fade-in' class with a delay
-  workCards.forEach((card, index) => {
-    setTimeout(() => {
-      card.classList.add('fade-in');
-    }, index * 200); // 200ms delay for each card
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5
   });
+
+  workCards.forEach(card => observer.observe(card));
+}
+
+function initSlideshow() {
+  if (slideshowActive) return;
+
+  const container = document.querySelector('.work__card-container');
+  const prevBtn = document.getElementById('prev-slide');
+  const nextBtn = document.getElementById('next-slide');
+
+  const updateButtons = () => {
+    prevBtn.disabled = container.scrollLeft <= 1;
+    nextBtn.disabled = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
+  };
+  
+  const prevClickListener = () => {
+    container.scrollBy({
+      left: -container.clientWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  const nextClickListener = () => {
+    container.scrollBy({
+      left: container.clientWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  // Add event listeners
+  prevBtn.addEventListener('click', prevClickListener);
+  nextBtn.addEventListener('click', nextClickListener);
+  container.addEventListener('scroll', updateButtons);
+  
+  // Store references to the listeners and buttons to be able to clean them up
+  slideshowListeners = {
+    prevBtn,
+    nextBtn,
+    container,
+    prevClickListener,
+    nextClickListener,
+    updateButtons
+  };
+
+  // Update buttons on load and scroll
+  updateButtons();
+  
+  slideshowActive = true;
+}
+
+function destroySlideshow() {
+  if (!slideshowActive) return;
+  
+  const { prevBtn, nextBtn, container, prevClickListener, nextClickListener, updateButtons } = slideshowListeners;
+
+  // Remove event listeners
+  prevBtn.removeEventListener('click', prevClickListener);
+  nextBtn.removeEventListener('click', nextClickListener);
+  container.removeEventListener('scroll', updateButtons);
+  
+  // Reset the slideshow state
+  slideshowActive = false;
+  slideshowListeners = {};
+}
+
+function handleResize() {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile && !slideshowActive) {
+    initSlideshow();
+  } else if (!isMobile && slideshowActive) {
+    destroySlideshow();
+  }
 }
 
 async function initPage() {
-  const btnSvgPlaceholders = document.querySelectorAll('.btn__svg');
 
   try {
-    const response = await fetch('./partials/svg-arrow.hbs');
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch SVG partial.');
-    }
-
-    const partialTemplate = await response.text();
-
-    Handlebars.registerPartial('svg-arrow', partialTemplate);
-
-    btnSvgPlaceholders.forEach(element => {
-      element.innerHTML = partialTemplate;
-    });
-
     initWorkCards();
+
+    // Initial check for screen size on page load
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener('resize', handleResize);
 
   } catch (error) {
     console.error('An error occurred during page initialization:', error);

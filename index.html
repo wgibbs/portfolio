@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="./css/style.min.css?v=1.1">
   <meta name="theme-color" content="#ffffff">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-  <script src="./js/main.js?v=1.1"></script>
 </head>
 
 <body>
@@ -26,11 +25,15 @@
       <div class="header__links">
         <a class="btn" href="https://github.com/wgibbs" target="_blank">
           <span>GitHub</span>
-          <span class="btn__svg"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
         <a class="btn" href="https://www.linkedin.com/in/wes-gibbs-a311198/" target="_blank">
           <span>LinkedIn</span>
-          <span class="btn__svg"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
       </div>
     </div>
@@ -53,7 +56,9 @@
         <p>{{ description }}</p>
         <a class="btn" href="{{ link_url }}" target="_blank">
           <span>View Project</span>
-          {{> svg-arrow }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
       </div>
     {{/each}}
@@ -62,12 +67,23 @@
   <section class="work">
     <div class="container">
       <div class="work__card-container"></div>
+      <div class="work__card-nav">
+        <button id="prev-slide" class="slide-btn prev-slide" aria-label="Previous card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <button id="next-slide" class="slide-btn" aria-label="Next card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
     <hr />
   </footer>
-
+  <script src="./js/main.js?v=1.1"></script>
 </body>
-</html>
