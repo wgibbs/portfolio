@@ -1,20 +1,25 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "private": true,
+  "description": "web development portfolio site",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgibbs/portfolio.git"
+  },
+  "author": "Wes Gibbs",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.27.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.35.2"
   },
   "devDependencies": {
-    "@nuxtjs/gtm": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^4.1.3",
-    "autoprefixer": "^10.2.6",
-    "core-js": "^3.9.1",
-    "fibers": "^5.0.0",
-    "nuxt": "^2.15.3",
-    "tailwindcss": "^2.1.4"
+    "gulp": "^5.0.1"
   }
 }
