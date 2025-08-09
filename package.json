@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "web development portfolio site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgibbs/portfolio.git"
+  },
+  "author": "Wes Gibbs",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.27.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  }
+}
