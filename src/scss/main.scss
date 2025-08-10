@@ -3,7 +3,7 @@ $color-dark: #212121;
 $color-light: #F8F8FF;
 $primary-border: 2px solid $color-dark;
 $tr-time: 0.4s;
-$primary-font: "Inter", sans-serif;
+$primary-font: "Lato", sans-serif;
 $grid-gap: 1rem;
 $bp-desktop-sm: 1100px;
 $bp-tablet: 768px;
@@ -19,10 +19,10 @@ html {
 
 body {
   background: $color-light;
+  color: $color-dark;
   font-family: $primary-font;
   font-optical-sizing: auto;
   font-size: 16px;
-  color: $color-dark;
   margin: 0;
 }
 
@@ -32,12 +32,10 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 3rem;
-  font-weight: 600;
 }
 
 h2 {
   font-size: 2.5rem;
-  font-weight: 500;
 }
 
 h3 {
@@ -49,6 +47,7 @@ h4 {
 }
 
 p {
+  line-height: 1.5rem;
   margin: 1rem 0 0;
 }
 
@@ -73,9 +72,6 @@ p {
 .font-light {
   font-weight: 300;
 }
-.font-medium {
-  font-weight: 500;
-}
 
 //Buttons
 .btn {
@@ -83,7 +79,7 @@ p {
   border: $primary-border;
   color: $color-dark;
   display: flex;
-  font-weight: 500;
+  font-weight: 700;
   justify-content: center;
   letter-spacing: 0.1rem;
   line-height: 1;
@@ -208,9 +204,9 @@ p {
   }
 
   p {
-    font-size: 1.25rem;
     line-height: 2rem;
     @media screen and (min-width: $bp-tablet) {
+      font-size: 1.25rem;
       max-width: 85%;
     }
   }
@@ -225,26 +221,23 @@ p {
   }
   
   &__card-container {
-    display: grid;
-    gap: $grid-gap;
-    grid-template-columns: 1fr;
-    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-    // Mobile slideshow styles
-    @media screen and (max-width: $bp-tablet) {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      
-      // Hide scrollbar for a cleaner look
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    @media screen and (min-width: $bp-tablet) {
+      display: grid;
+      gap: $grid-gap;
+      grid-template-columns: 1fr;
+      width: 100%;
     }
 
     @media screen and (min-width: $bp-tablet) {
@@ -258,17 +251,21 @@ p {
   
   &__card {
     border: $primary-border;
+    flex: 0 0 100%;
     padding: 1.25rem 1.25rem 5.5rem;
-    opacity: 0;
+    opacity: 1;
     position: relative;
+    scroll-snap-align: center;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     width: 100%;
     
-    // Mobile slideshow styles
-    @media screen and (max-width: $bp-tablet) {
-      flex: 0 0 100%;
-      scroll-snap-align: center;
-      margin-right: $grid-gap;
+    @media screen and (min-width: $bp-tablet) {
+      margin-right: 0;
+      opacity: 0;
+
+      &.fade-in {
+        opacity: 1;
+      }
     }
 
     figure {
@@ -314,35 +311,28 @@ p {
       right: 0;
       width: 90%;
     }
-
-    &.fade-in {
-      opacity: 1;
-    }
   }
   
   &__card-nav {
-    display: none;
+    display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 
-    @media screen and (max-width: $bp-tablet) {
-      display: flex;
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
     }
 
     button {
       background: transparent;
       border: 0;
+      color: $color-dark;
       padding: 0.5rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background-color $tr-time ease;
-
-      // &:hover {
-      //   background-color: rgba($color-dark, 0.1);
-      // }
       
       &:disabled {
         opacity: 0.3;
@@ -360,8 +350,13 @@ p {
 
 //Footer
 .footer {
-  margin-top: 2.5rem;
-  padding-bottom: 7.5rem;
+  background: $color-dark;
+  padding-bottom: 5rem;
+  
+  @media screen and (min-width: $bp-tablet) {
+    margin-top: 2.5rem;
+    padding-bottom: 10rem;
+  }
 
   hr {
     background: $color-dark;
