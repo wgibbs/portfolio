@@ -3,34 +3,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>wes gibbs - web developer</title>
-  <meta name="description" content="I am a web developer who gravitates towards the visual side of the technology world.">
+  <meta name="description" content="I specialize in building responsive microsites, landing pages and emails using a keen eye for detail and attention to design.">
   <meta property="og:title" content="wes gibbs - web developer">
   <meta property="og:url" content="https://wgibbs.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="icon" href="./img/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="./css/style.min.css?v=1.0">
+  <link rel="stylesheet" href="./css/style.min.css?v=1.3">
   <meta name="theme-color" content="#ffffff">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-  <script src="./js/main.js?v=1.0"></script>
 </head>
 
 <body>
   <header class="header">
     <div class="container">
       <div class="header__titles">
-        <h1 class="font-medium">wes gibbs</h1>
+        <h1>wes gibbs</h1>
         <h2 class="font-light">web developer</h2>
       </div>
       <div class="header__links">
         <a class="btn" href="https://github.com/wgibbs" target="_blank">
           <span>GitHub</span>
-          <span class="btn__svg"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
         <a class="btn" href="https://www.linkedin.com/in/wes-gibbs-a311198/" target="_blank">
           <span>LinkedIn</span>
-          <span class="btn__svg"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
       </div>
     </div>
@@ -38,7 +41,7 @@
 
   <section class="intro">
     <div class="container">
-      <h3 class="font-medium">Hello, and thanks for stopping by&nbsp;&mdash;</h3>
+      <h3>Hello, and thanks for stopping by&nbsp;&mdash;</h3>
       <p>With a passion for the visual side of web development, I specialize in building responsive microsites, landing pages and emails using a keen eye for detail and attention to design. Take a look at some of my recent projects below.</p>
     </div>
   </section>
@@ -49,11 +52,13 @@
         <figure>
           <img src="{{ img_url }}" alt="{{ title }}: Image" />
         </figure>
-        <h4 class="font-medium">{{ title }}</h4>
+        <h4>{{ title }}</h4>
         <p>{{ description }}</p>
         <a class="btn" href="{{ link_url }}" target="_blank">
           <span>View Project</span>
-          {{> svg-arrow }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
       </div>
     {{/each}}
@@ -62,12 +67,23 @@
   <section class="work">
     <div class="container">
       <div class="work__card-container"></div>
+      <div class="work__card-nav">
+        <button id="prev-slide" class="slide-btn prev-slide" aria-label="Previous card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <button id="next-slide" class="slide-btn" aria-label="Next card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
     <hr />
   </footer>
-
+  <script src="./js/main.js?v=1.3"></script>
 </body>
-</html>
